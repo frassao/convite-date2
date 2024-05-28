@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite para um Date</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .buttons .no {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Olá, [Nome da Menina]!</h1>
+        <p>Espero que você esteja tendo um ótimo dia. Eu gostaria de te convidar para um encontro.</p>
+        <p>Seria incrível passar um tempo com você e aproveitar momentos agradáveis juntos.</p>
+        <p>O que você acha?</p>
+        <div class="buttons">
+            <button class="yes" onclick="responder('SIM')">SIM</button>
+            <button class="no" onclick="responder('NÃO')">NÃO</button>
+        </div>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function responder(resposta) {
+            const responseElement = document.getElementById('response');
+            if (resposta === 'SIM') {
+                responseElement.innerText = 'Que ótimo! Estou ansioso para nosso encontro! 😊';
+            } else {
+                responseElement.innerText = 'Tudo bem, quem sabe uma outra hora. 🙂';
+            }
+        }
+    </script>
+</body>
+</html>
